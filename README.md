@@ -56,3 +56,51 @@ Created the following features:
 
 ## ✅ Results
 
+- The model explains ~77.8% of the variance in future 5-day volatility on test data.
+- Low MSE indicates precise magnitude predictions.
+
+---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+- **Correlation matrix** revealed moderate correlation between:
+  - MACD, RSI, and 5-day future volatility
+  - Volume changes and near-term volatility
+
+- **Scatter matrix** showed some nonlinear patterns, justifying the use of tree-based models.
+
+---
+
+## 📦 Files
+
+- `volatility_model.pkl`: Trained model saved via `pickle`
+- `volatility_forecast.ipynb`: Jupyter notebook with full pipeline
+- `requirements.txt`: List of Python libraries used
+
+---
+
+## 💡 Future Work
+
+- Add more stocks (multi-asset modeling)
+- Use more advanced models (XGBoost, LightGBM, or hybrid with GARCH)
+- Regime-based models (bull/bear)
+- Deployment with Flask/Dash
+
+---
+
+## 🧠 Insights
+
+- **Lagged volatility** was one of the strongest predictors—volatility clusters!
+- **MACD and RSI** helped capture momentum and overbought/oversold conditions.
+- Bollinger Band width helped quantify price spread and mean reversion behavior.
+
+---
+
+## 📚 Requirements
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+
+
